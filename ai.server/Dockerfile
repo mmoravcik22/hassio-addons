@@ -9,12 +9,14 @@ ARG BUILD_ARCH=${TARGETARCH}
 RUN \
     apt-get update \
     \
+    && apt-get remove libedgetpu1-std
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
         jq\
         tzdata \
         xz-utils \
+        libedgetpu1-max \
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="i686"; \
