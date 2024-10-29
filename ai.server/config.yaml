@@ -1,5 +1,5 @@
 name: CodeProject AI.Server (CPU)
-version: 2.5.1
+version: 2.8.0
 url: https://hub.docker.com/r/codeproject/ai-server
 image: ghcr.io/skrashevich/hassio-addon-ai.server-{arch}
 panel_icon: mdi:face-recognition
@@ -24,6 +24,7 @@ ports_description:
 webui: "[PROTO:http]://[HOST]:[PORT:5000]/"
 map:
   - config:rw
+device: "/dev/bus/usb"
 environment:
   HA_ADDON: "true"
   DATA_DIR: "/config/ai-server/data"
