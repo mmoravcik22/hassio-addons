@@ -9,7 +9,7 @@ ARG BUILD_ARCH=${TARGETARCH}
 RUN \
     apt-get update \
     \
-    && apt-get remove libedgetpu1-std
+    && apt-get remove libedgetpu1-std \
     && apt-get install -y --no-install-recommends \
         ca-certificates \
         curl \
