@@ -3,6 +3,7 @@ version: 2.8.0
 url: https://hub.docker.com/r/codeproject/ai-server
 image: ghcr.io/mmoravcik22/hassio-addon-ai.server-{arch}
 panel_icon: mdi:face-recognition
+panel_title: CodeProject
 slug: ai.server
 description: standalone open-source AI server
 arch:
@@ -14,14 +15,18 @@ init: false
 full_access: false
 usb: true
 video: true
-ingress: false
+ingress: true
+ingress_port: 5000
+ingress_entry: /
+homeassistant_api: true
 privileged:
   - PERFMON
 ports:
   5000/tcp: 5000
 ports_description:
   5000/tcp: Web interface
-webui: "[PROTO:http]://[HOST]:[PORT:5000]/"
+webui: "http://[HOST]:[PORT:5000]/"
+watchdog: "http://[HOST]:[PORT:5000]/"
 map:
   - config:rw
 environment:
