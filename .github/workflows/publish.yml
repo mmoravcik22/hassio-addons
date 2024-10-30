@@ -1,9 +1,6 @@
 name: "Publish"
 
-on: 
-  release:
-    types: [published]
-  workflow_dispatch:
+on: [push, pull_request]
 
 jobs:
   build:
