@@ -45,7 +45,7 @@ LABEL \
   io.hass.type="addon" \
   io.hass.arch="aarch64|amd64"
 
-ADD --link https://github.com/hassio-addons/bashio/archive/v0.14.3.tar.gz /tmp/bashio.tar.gz
+ADD --link https://github.com/hassio-addons/bashio/archive/v0.16.2.tar.gz /tmp/bashio.tar.gz
 RUN mkdir -p /tmp/bashio \
     && tar zxvf \
         /tmp/bashio.tar.gz \

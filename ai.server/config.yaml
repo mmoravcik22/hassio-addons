@@ -15,11 +15,6 @@ init: false
 full_access: false
 usb: true
 video: true
-ingress: true
-ingress_port: 6000
-ingress_entry: /
-homeassistant_api: true
-hassio_api: true
 privileged:
   - PERFMON
 ports:
